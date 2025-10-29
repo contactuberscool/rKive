@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rKive - Test Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .test-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .test-section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .test-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .test-card:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+        
+        .test-card h3 {
+            color: #495057;
+            margin-bottom: 0.5rem;
+        }
+        
+        .test-card p {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        
+        .status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status.ready {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+            margin: 0.5rem;
+        }
+        
+        .btn:hover {
+            background: #5a6fd8;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 3rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>rKive</h1>
+            <p>Digital Archive & Knowledge Management System</p>
+        </div>
+        
+        <div class="test-section">
+            <h2>Test Page</h2>
+            <p>This is a test page to verify that your rKive project is working correctly. Use this page to test various features and functionality as you develop your application.</p>
+            
+            <div class="test-grid">
+                <div class="test-card">
+                    <h3>Basic Functionality</h3>
+                    <p>Test core features like file upload, search, and organization.</p>
+                    <span class="status pending">Pending</span>
+                </div>
+                
+                <div class="test-card">
+                    <h3>User Interface</h3>
+                    <p>Verify responsive design and user experience elements.</p>
+                    <span class="status pending">Pending</span>
+                </div>
+                
+                <div class="test-card">
+                    <h3>Data Management</h3>
+                    <p>Test data storage, retrieval, and synchronization.</p>
+                    <span class="status pending">Pending</span>
+                </div>
+                
+                <div class="test-card">
+                    <h3>Search & Filter</h3>
+                    <p>Test search functionality and filtering capabilities.</p>
+                    <span class="status pending">Pending</span>
+                </div>
+                
+                <div class="test-card">
+                    <h3>Performance</h3>
+                    <p>Monitor loading times and system performance.</p>
+                    <span class="status pending">Pending</span>
+                </div>
+                
+                <div class="test-card">
+                    <h3>Security</h3>
+                    <p>Test authentication and data protection features.</p>
+                    <span class="status pending">Pending</span>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn" onclick="runTests()">Run Tests</button>
+                <button class="btn" onclick="clearTests()">Clear Results</button>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 rKive. Built for digital knowledge management.</p>
+        </div>
+    </div>
+    
+    <script>
+        function runTests() {
+            const statusElements = document.querySelectorAll('.status');
+            statusElements.forEach((status, index) => {
+                setTimeout(() => {
+                    status.textContent = 'Testing...';
+                    status.className = 'status pending';
+                    
+                    setTimeout(() => {
+                        // Simulate test results
+                        const isPass = Math.random() > 0.3; // 70% pass rate for demo
+                        status.textContent = isPass ? 'Passed' : 'Failed';
+                        status.className = `status ${isPass ? 'ready' : 'pending'}`;
+                    }, 1000 + (index * 200));
+                }, index * 300);
+            });
+        }
+        
+        function clearTests() {
+            const statusElements = document.querySelectorAll('.status');
+            statusElements.forEach(status => {
+                status.textContent = 'Pending';
+                status.className = 'status pending';
+            });
+        }
+        
+        // Add some interactive features
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('rKive Test Page Loaded Successfully');
+            
+            // Add click handlers to test cards
+            const testCards = document.querySelectorAll('.test-card');
+            testCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
