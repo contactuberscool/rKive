@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rKive - Digital Archive & Knowledge Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+        
+        .main-section {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .main-section h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .main-section p {
+            color: #495057;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: #6c757d;
+            font-size: 1rem;
+        }
+        
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+        
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .button-group {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 3rem;
+            opacity: 0.9;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>rKive</h1>
+            <p>Digital Archive & Knowledge Management System</p>
+            <div class="status-badge">🚀 Live on GitHub Pages</div>
+        </div>
+        
+        <div class="main-section">
+            <h2>Welcome to rKive</h2>
+            <p>rKive is a modern digital archive and knowledge management system designed to help you organize, store, and retrieve your digital content efficiently. Whether you're managing documents, media files, or knowledge bases, rKive provides the tools you need.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📁 Content Organization</h3>
+                    <p>Organize your files and documents with an intuitive folder structure and tagging system.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🔍 Powerful Search</h3>
+                    <p>Find what you need quickly with advanced search and filtering capabilities.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🏷️ Smart Tagging</h3>
+                    <p>Tag and categorize your content for easy retrieval and organization.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>📊 File Management</h3>
+                    <p>Upload, store, and manage files of all types with ease.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🔒 Secure Storage</h3>
+                    <p>Your data is protected with modern security features and encryption.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>⚡ Fast Performance</h3>
+                    <p>Lightning-fast access to your content with optimized performance.</p>
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <a href="test.html" class="btn">View Test Page</a>
+                <a href="https://github.com/contactuberscool/rKive" class="btn btn-secondary" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 rKive. Built for digital knowledge management.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Deployed on GitHub Pages</p>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('rKive Main Page Loaded Successfully');
+            console.log('GitHub Pages Deployment Active');
+        });
+    </script>
+</body>
+</html>
